@@ -9,4 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run clang-format style check for C programs.
-      uses: jidicula/clang-format-action@main
+      uses: jidicula/clang-format-action@v4.18.0
+      with:
+        # Pinned: different clang-format versions format code differently (22 changes this code).
+        clang-format-version: '18'
